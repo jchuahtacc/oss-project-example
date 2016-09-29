@@ -22,6 +22,8 @@ public class AddDialog extends JDialog {
 	JButton ok = new JButton("OK");
 	JLabel prompt = new JLabel("Enter a word");
 	JPanel panel = new JPanel();
+	int numInputs = 0;
+	
 	public AddDialog() {
 		super(Main.window);
 		panel.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -41,6 +43,10 @@ public class AddDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Main.words.add(input.getText());
+				numInputs++;
+				if (numInputs > 5) {
+					Main.renderer.placeWords();
+				}
 			}
 		});
 		
