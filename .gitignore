@@ -1,5 +1,3 @@
 wordle-project/bin/*
 **/.DS_STORE
-**/.classpath
-**/.settings
-**/.project
+/bin/
