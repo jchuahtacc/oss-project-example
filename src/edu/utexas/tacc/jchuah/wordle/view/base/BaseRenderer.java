@@ -43,8 +43,8 @@ public abstract class BaseRenderer {
 		double t = 0;
 		Rectangle adding = new Rectangle(0, 0, width, height);
 		Rectangle present = new Rectangle(0, 0, 20, 20);
-		int x = Main.window.getWidth() / 2;
-		int y = Main.window.getHeight() / 2;
+		int x = 400 / 2;
+		int y = 300 / 2;
 		while (!insert) {
 			int dx = (int)(t * Math.cos(t));
 			int dy = (int)(t * Math.sin(t));
