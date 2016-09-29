@@ -19,7 +19,7 @@ In designing this project skeleton, I used a couple principles:
 - Use abstract base classes so students can create multiple implementations and substitute them easily in the Main method.
 - TODO markers so students can use the Task View in Eclipse to quickly identify where they need to code
 - Use of Java standard APIs, so no libraries have to be installed... though students may have to do some Googling to understand how the APIs were used
-- Non-original code is allowed, though attribution is a requirement. Analyzing and adapting code can fulfill the same learning objectives as implementing an algorithm from scratch, and code from a foreign project (event another group's) will rarely ever integrate perfectly without modification.
+- Non-original code is typically allowed in my classes and some objectives may require example code, though attribution is a requirement. Analyzing and adapting code can fulfill the same learning objectives as implementing an algorithm from scratch, and code from a foreign project (event another group's) will rarely ever integrate perfectly without modification.
 
 ### Lesson Objectives
 
