@@ -3,19 +3,17 @@ package edu.utexas.tacc.jchuah.wordle.model.base;
 import edu.utexas.tacc.jchuah.wordle.model.Word;
 
 public interface BaseWordList {
-	// TODO: Pick a structure to store new words
+	// Stores Words
 	
-	// TODO: Implement this method to store new words
-	//			- Words should not occur in your word list more
-	//			than once, regardless of case
-	//			- If a Word already occurs in your list, call
-	//			that word's increment() method instead
+	// Add a word to this collection
+	// Words may never be added more than once
+	// If add is called with a word that already appears in this collection, the matching Word
+	// object should have its increment method called
 	public void add(String newWord);
 	
-	// TODO: Return the number of words
+	// Return the number of unique Word elements
 	public int size();
 	
-	// TODO: Return an array of all instances of Word that you have stored,
-	//			sorted in order of occurrences
+	// Return Word objects as an array, sorted in descending order of occurrences
 	public Word[] getArray();
 }
