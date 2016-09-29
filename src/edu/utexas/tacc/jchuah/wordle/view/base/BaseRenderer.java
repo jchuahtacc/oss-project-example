@@ -11,8 +11,7 @@ import edu.utexas.tacc.jchuah.wordle.Main;
 import edu.utexas.tacc.jchuah.wordle.model.Word;
 
 public abstract class BaseRenderer {
-	static double dt = 0.5;
-	static double r = 2;
+	static double dt = 1;
 	
 	BaseFontList fonts = new BaseFontList();
 	ArrayList<JLabel> added = new ArrayList<JLabel>();
@@ -20,6 +19,7 @@ public abstract class BaseRenderer {
 	public void placeWords() {
 
 		added.clear();
+		Main.window.getContentPane().removeAll();
 		
 		Word[] wordArray = Main.words.getArray();
 		
@@ -28,8 +28,6 @@ public abstract class BaseRenderer {
 		for (Word word : wordArray) {
 			addWord(word);
 		}
-		
-		Main.window.pack();
 	}
 	
 	public abstract void pickSizes(Word[] wordArray);
@@ -45,13 +43,13 @@ public abstract class BaseRenderer {
 		double t = 0;
 		Rectangle adding = new Rectangle(0, 0, width, height);
 		Rectangle present = new Rectangle(0, 0, 20, 20);
-		int x = 0;
-		int y = 0;
+		int x = Main.window.getWidth() / 2;
+		int y = Main.window.getHeight() / 2;
 		while (!insert) {
-			x = (int)(t * Math.cos(t) * r);
-			y = (int)(t * Math.sin(t) * r);
-			adding.x = x;
-			adding.y = y;
+			int dx = (int)(t * Math.cos(t));
+			int dy = (int)(t * Math.sin(t));
+			adding.x = x + dx;
+			adding.y = y + dy;
 			for (JLabel label : added) {
 				Point p = label.getLocation();
 				present.width = label.getWidth();
